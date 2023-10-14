@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,7 +11,14 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: [
+          `'Inter var', ${defaultTheme.fontFamily.sans.join(', ')}`,
+          { fontFeatureSettings: "'cv02', 'cv03', 'cv04', 'cv11'" },
+        ],
+      },
+    },
   },
   plugins: [],
 };
