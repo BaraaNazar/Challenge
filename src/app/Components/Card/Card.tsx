@@ -26,8 +26,8 @@ const Card: React.FC<CardProps> = ({
   rating,
 }) => {
   return (
-    <li className='rounded-lg shadow-lg font-sans lg:w-60 max-w-sm my-4'>
-      <div className='flex justify-center items-center  py-4 w-full '>
+    <li className='rounded-lg shadow-lg font-sans md:w-[240px] max-w-sm my-4'>
+      <div className='flex justify-center items-center  p-3 w-full '>
         <Image
           className='h-64 w-auto'
           src={imgSrc}
@@ -36,29 +36,23 @@ const Card: React.FC<CardProps> = ({
           height={288}
         />
       </div>
-      <div className='px-4'>
+      <div className='px-4 space-x-2 '>
         <h5 className=' text-xl  text-[#484848]'>
           {itemName.length > 27 ? itemName.slice(0, 27) + '...' : itemName}
         </h5>
       </div>
-      <div className='flex flex-col justify-center  py-1'>
-        <div className='flex justify-between px-4'>
-          <div className='flex flex-col'>
-            <div className=''>
-              <p className=' font-normal text-[#8A8A8A] text-sm'>{brandName}</p>
-            </div>
-            <div className=''>
-              <div className='line-through text-[#c0464b] text-base'>
-                {originalValue == value ? '' : `${originalValue} ${currency}`}
-              </div>
-              <div className='text-2xl font-base text-[#484848] '>{`${value} ${currency}`}</div>
-            </div>
+      <div className='flex items-center justify-between px-4 space-x-2 pb-2 '>
+        <p className=' font-normal text-[#8A8A8A] text-sm'>{brandName}</p>
+        <StarRating rating={rating} />
+      </div>
+      <div className='flex items-end justify-between px-4 space-x-2 pb-2  h-14 md:w-[244px]'>
+        <div className=''>
+          <div className='line-through text-[#c0464b] text-base'>
+            {originalValue == value ? '' : `${originalValue} ${currency}`}
           </div>
-          <section className='flex flex-wrap justify-center items-start'>
-            <StarRating rating={rating} />
-            <AvailableColors colors={colors} />
-          </section>
+          <div className='text-2xl font-base text-[#484848] '>{`${value} ${currency}`}</div>
         </div>
+        <AvailableColors colors={colors} />
       </div>
     </li>
   );

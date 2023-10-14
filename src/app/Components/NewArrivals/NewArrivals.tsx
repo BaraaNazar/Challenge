@@ -9,14 +9,14 @@ const NewArrivals = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [active, setActive] = useState(false);
 
-  const onClickCategory = (categoryName) => {
+  const onClickCategory = (categoryName: string) => {
     setSelectedCategory(categoryName);
     setActive(true);
   };
   return (
     <div className='flex flex-col justify-center items-center w-full  font-serif p-12'>
       <section className='flex flex-col justify-center items-center text-center space-y-8 w-full py-9'>
-        <h1 className='text-[#484848] md:text-5xl text-4xl font-medium font-serif'>
+        <h1 className='text-[#484848] md:text-[48px] text-4xl font-medium font-serif leading-none'>
           Miswag New Arrivals
         </h1>
         <div className='w-[90%] md:text-base text-sm font-sans font-light text-[#8A8A8A]'>
@@ -24,7 +24,7 @@ const NewArrivals = () => {
         </div>
       </section>
       <section>
-        <ul className='flex justify-around items-center space-x-8 py-9 overflow-x-auto'>
+        <ul className='flex justify-around items-center space-x-8 py-5 overflow-x-auto'>
           {Array.from(
             new Set(dataset.map((item) => item.category)).values()
           ).map((categoryName) => (
@@ -38,7 +38,7 @@ const NewArrivals = () => {
         </ul>
       </section>
       <section>
-        <ul className='flex md:justify-start justify-center  items-center flex-wrap gap-2'>
+        <ul className='flex md:justify-start justify-center  items-center flex-wrap gap-4'>
           {dataset
             .filter(
               (item) =>

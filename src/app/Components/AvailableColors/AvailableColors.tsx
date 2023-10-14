@@ -6,7 +6,7 @@ interface AvailableColorsProps {
 
 const AvailableColors: React.FC<AvailableColorsProps> = ({ colors }) => {
   return (
-    <ul className='flex items-center w-fit justify-center py-4'>
+    <ul className='flex items-center w-12 justify-center '>
       {colors.length < 2 ? (
         colors.map((color) => (
           <li
@@ -16,7 +16,7 @@ const AvailableColors: React.FC<AvailableColorsProps> = ({ colors }) => {
           ></li>
         ))
       ) : (
-        <ul className='flex justify-between w-fit'>
+        <ul className='flex justify-between w-12 pb-1'>
           <li
             className={` w-7 h-7   rounded-full shadow-lg `}
             key={colors[0]}

@@ -20,9 +20,9 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({
         className={`
           ${
             active && categoryName === active
-              ? 'bg-black text-white shadow-2xl'
+              ? 'bg-black text-white shadow-xl'
               : 'bg-gray-50 text-[#8A8A8A] hover:bg-gray-100 '
-          } text-sm md:text-base font-light font-sans  md:py-4 md:px-8 py-2 px-4 h-16 w-32 md:h-full md:w-full border-none  rounded-xl`}
+          } text-sm md:text-base font-light font-sans  md:py-4 md:px-8  py-2 px-4 h-16 w-32 md:h-full md:w-full border-none  rounded-xl`}
       >
         {categoryName
           .split('-')

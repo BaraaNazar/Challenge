@@ -1,8 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { PT_Serif } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
+const ptSerif = PT_Serif({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--PT_Serif',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +25,9 @@ export default function RootLayout({
       <head>
         <link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${ptSerif.className}`}>
+        {children}
+      </body>
     </html>
   );
 }

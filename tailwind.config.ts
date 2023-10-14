@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,6 +18,7 @@ module.exports = {
           `'Inter var', ${defaultTheme.fontFamily.sans.join(', ')}`,
           { fontFeatureSettings: "'cv02', 'cv03', 'cv04', 'cv11'" },
         ],
+        serif: ['var(--PT_Serif)', ...defaultTheme.fontFamily.serif],
       },
     },
   },
