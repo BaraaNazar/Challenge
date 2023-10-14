@@ -14,17 +14,17 @@ const NewArrivals = () => {
     setActive(true);
   };
   return (
-    <div className='flex flex-col justify-center items-center w-full  font-serif p-12'>
+    <div className='flex flex-col justify-center items-center w-full  font-serif p-[52px] ml-[5px]'>
       <section className='flex flex-col justify-center items-center text-center space-y-8 w-full py-9'>
         <h1 className='text-[#484848] md:text-[48px] text-4xl font-medium font-serif leading-none'>
           Miswag New Arrivals
         </h1>
-        <div className='w-[90%] md:text-base text-sm font-sans font-light text-[#8A8A8A]'>
+        <div className='md:text-[16px] text-sm font-sans font-light text-[#8A8A8A]'>
           Stay Ahead of the Curve with Miswag&#39;g Fresh Arrivals!
         </div>
       </section>
       <section>
-        <ul className='flex justify-around items-center space-x-8 py-5 overflow-x-auto'>
+        <ul className='flex lg:justify-around items-center lg:space-x-8 pt-4 justify-center space-x-2 px-2'>
           {Array.from(
             new Set(dataset.map((item) => item.category)).values()
           ).map((categoryName) => (

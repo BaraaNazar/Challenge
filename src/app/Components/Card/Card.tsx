@@ -29,7 +29,7 @@ const Card: React.FC<CardProps> = ({
     <li className='rounded-lg shadow-lg font-sans md:w-[240px] max-w-sm my-4'>
       <div className='flex justify-center items-center  p-3 w-full '>
         <Image
-          className='h-64 w-auto'
+          className='h-56 w-auto'
           src={imgSrc}
           alt=''
           width={240}
